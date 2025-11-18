@@ -12,7 +12,12 @@
     "serve:prod": "dotenv -e .env.prod rspack serve",
     "build:test": "dotenv -e .env.test rspack build",
     "build:prod": "dotenv -e .env.prod rspack build",
-    "start": "node start.js"
+    "start": "node start.js",
+    "dev": "node start-local.js",
+    "start:local": "node start-local.js",
+    "start:fast": "node start-local.js",
+    "start:build": "node start.js --build",
+    "start:serve": "node start.js --serve"
   },
   "private": true,
   "dependencies": {

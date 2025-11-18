@@ -1,11 +1,39 @@
 # 基于 Designable 开发 Taro小程序前端页面可视化搭建工具
 
+## 使用指南
+
+### 1.首先最外层根目录下安装依赖
+
+```bash
+pnpm install
+```
+
+### 2.进入packages/editor目录下安装依赖
+
+```bash
+cd packages/editor
+npm run start:serve
+
+```
+
+### 3.进入packages/mobile目录下启动
+
+```bash
+cd packages/mobile
+npm run dev:h5
+```
+
+1，2，3步骤完成后即可完成启动。
+这里editor启动后，自动绑定到mobile项目的localhost:8080端口。
+
+## 项目是monorepo架构
+
 ## 目录介绍
 
 ├─ packages
-  ├─ editor: 基于 `Designable` + `Formily.js` 实现的页面可视化搭建设计器，使用 `rspack` 构建，并做了兼容Taro组件H5渲染处理
-  ├─ mobile: Taro项目demo例子
-  ├─ ui: 使用 `@nutui/nutui-react-taro` 组件库做的适配formily的组件
+├─ editor: 基于 `Designable` + `Formily.js` 实现的页面可视化搭建设计器，使用 `rspack` 构建，并做了兼容Taro组件H5渲染处理
+├─ mobile: Taro项目demo例子
+├─ ui: 使用 `@nutui/nutui-react-taro` 组件库做的适配formily的组件
 
 ## 预览地址
 
@@ -91,19 +119,19 @@ npm start
 ## 设计器目录详细介绍
 
 ├─ editor
-  ├─ src
-    ├─ common 一些组件
-    ├─ components 物料组件
-    ├─ designable designable源代码copy
-      ├─ designable-core 核心逻辑
-      ├─ designable-formily-setters 右侧属性配置栏中复杂属性配置组件
-      ├─ designable-formily-transformer designable的TreeNode与formily的Schema格式互转方法
-      ├─ designable-react 设计器界面组件
-      ├─ designable-shared 通用方法
-    ├─ hooks/useDropTemplate 拖拽物料组件后的处理
-    ├─ locales 国际化配置
-    ├─ schemas 物料组件右侧属性配置栏配置
-    ├─ service 保存页面配置方法
-    ├─ widgets 一些组件设计器界面组件
-    ├─ app.tsx 设计器主界面
-    ├─ index.tsx 入口
+├─ src
+├─ common 一些组件
+├─ components 物料组件
+├─ designable designable源代码copy
+├─ designable-core 核心逻辑
+├─ designable-formily-setters 右侧属性配置栏中复杂属性配置组件
+├─ designable-formily-transformer designable的TreeNode与formily的Schema格式互转方法
+├─ designable-react 设计器界面组件
+├─ designable-shared 通用方法
+├─ hooks/useDropTemplate 拖拽物料组件后的处理
+├─ locales 国际化配置
+├─ schemas 物料组件右侧属性配置栏配置
+├─ service 保存页面配置方法
+├─ widgets 一些组件设计器界面组件
+├─ app.tsx 设计器主界面
+├─ index.tsx 入口
